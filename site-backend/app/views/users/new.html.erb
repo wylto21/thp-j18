@@ -1,0 +1,8 @@
+<h1>Users#new</h1>
+<p>Bienvenue dans la création d'utilisateurs !</p>
+<form action="<%= create_path %>" method="POST">
+	<label>Username : </label><input type="text" name="username"><br>
+	<label>Bio :</label><br><textarea name="bio"></textarea>
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="submit">
+</form>
