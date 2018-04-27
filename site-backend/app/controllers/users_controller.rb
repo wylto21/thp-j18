@@ -9,10 +9,10 @@ class UsersController < ApplicationController
   	user = User.create(username: "#{@username}", bio: "#{@bio}")
     user
     if user.errors.messages[:username] == []
-      #redirect_to show_path(user[:username])
+      redirect_to show_path(user[:username])
     else
-      #redirect_to error_path
-      #@@error_message = user.errors.messages[:username]
+      redirect_to error_path
+      @@error_message = user.errors.messages[:username]
     end
   end
 
